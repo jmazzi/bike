@@ -7,6 +7,7 @@ Usage:
 ===================================
 
 Create a new Bike instance:
+
 ```ruby
   bike = Bike.new
 ```
@@ -29,7 +30,8 @@ Return a hash of bike owner details:
   pp bike.owner(bike_id)
 ```
 
-Create a new Person instance:
+Create a new Person instance
+
 ```ruby
   person = Person.new
 ```
