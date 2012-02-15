@@ -8,7 +8,6 @@ Usage:
 
 Create a new Bike instance:
 ```ruby
-  require 'pp'
   bike = Bike.new
 ```
 
