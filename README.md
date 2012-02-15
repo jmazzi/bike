@@ -4,7 +4,7 @@ Bike
 The wheels on the bicycle goes 'round and 'round.
 
 Usage:
-===================================
+-----------------------------------
 
 Create a new Bike instance:
 
@@ -30,8 +30,7 @@ Return a hash of bike owner details:
   pp bike.owner(bike_id)
 ```
   
-  
- 
+
 Create a new Person instance
 
 ```ruby
