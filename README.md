@@ -8,26 +8,26 @@ Usage:
 
 Create a new Bike instance:
 ```ruby
-require 'pp'
-bike = Bike.new
+  require 'pp'
+  bike = Bike.new
 ```
 
 Return a list of bikes as an array of hashes:
 
 ```ruby
-pp bike.list
+  pp bike.list
 ```
 
 Return a hash of the parts of a specific bike:
 
 ```ruby
-pp bike.parts(bike_id)
+  pp bike.parts(bike_id)
 ```
 
 Return a hash of bike owner details:
 
 ```ruby
-pp bike.owner(bike_id)
+  pp bike.owner(bike_id)
 ```
 
 Create a new Person instance:
@@ -38,11 +38,11 @@ Create a new Person instance:
 Return array of hashes for each person:
 
 ```ruby
-pp person.list
+  pp person.list
 ```
 
 Return hash with person details for specific person:
 
 ```ruby
-  person.show(person_id)
+  pp person.show(person_id)
 ```
