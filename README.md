@@ -29,7 +29,9 @@ Return a hash of bike owner details:
 ```ruby
   pp bike.owner(bike_id)
 ```
-
+  
+  
+ 
 Create a new Person instance
 
 ```ruby
