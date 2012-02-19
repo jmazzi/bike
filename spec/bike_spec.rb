@@ -12,8 +12,8 @@ describe Bike do
       @bikes.should be_an(Array)
     end
     
-    it "should return 5 bikes" do
-      @bikes.should have(5).bikes
+    it "should return 2 bikes" do
+      @bikes.should have(2).bikes
     end
     
     it "should return a hash of a bike" do
