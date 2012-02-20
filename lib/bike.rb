@@ -12,7 +12,7 @@ class Bike
              {:bike_id   => 2,
               :owner_id  => 2,
               :name      => 'Trek', 
-              :parts     => ['frame', 'tires', 'saddle']}]
+              :parts     => ['frame', 'tires', 'saddle', 'rims', 'handlebars']}]
   end
 
   def list
@@ -20,10 +20,9 @@ class Bike
   end
   
   def parts(bike_id)
+    #this is bloated crap because of how @bikes is organized
     @bikes.each do |bike|
-      if bike[:bike_id] == bike_id
-        return bike[:parts]
-      end
+      return bike[:parts] if bike[:bike_id] == bike_id
     end
   end
   
