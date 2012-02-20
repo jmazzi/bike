@@ -5,7 +5,7 @@ describe Person do
   before { @person = Person.new }
 
   describe "#list" do
-    before { @people = @person.list }
+    before { @people = @people.list }
   end
 
 end
