@@ -20,5 +20,24 @@ describe Bike do
       @bikes.first.should be_a(Hash)
     end
     
+    it "should return bike_id as a fixnum" do
+      @bikes.first[:bike_id].should be_a(Fixnum)
+    end
+    
+    it "should return owner_id as a fixnum" do
+      @bikes.first[:owner_id].should be_a(Fixnum)
+    end
+    
+    it "should return name as a string" do
+      @bikes.first[:name].should be_a(String)
+    end
+    
+    it "should return parts as an array" do
+      @bikes.first[:parts].should be_a(Array)
+    end
+    
+    it "should return parts array with only strings" do
+    end
+    
   end
 end
