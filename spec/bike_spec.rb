@@ -48,14 +48,15 @@ describe Bike do
   
   describe "#parts" do
         
-    it "should raise ArgumentError if there are no expected arguments" do
+    it "should raise ArgumentError if there are no arguments" do
       expect { @bike.parts }.to raise_error(ArgumentError)
     end
     
-    it "should only expect a bike_id as an argument" do
-      @bike.parts(1).should respond_to(1)
+    it "should only expect a singular bike_id as an argument" do
+      @bike.parts(1).should be_true
     end
     
+
   end
   
 end
