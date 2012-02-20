@@ -17,4 +17,7 @@ class Bike
     bikes
   end
   
+  def parts(bike_id)
+    bike_id
+  end
 end

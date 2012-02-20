@@ -7,7 +7,7 @@ describe Bike do
   describe "#list" do
     
     before { @bikes = @bike.list }
-    
+
     it "should return an array" do
       @bikes.should be_an(Array)
     end
@@ -36,9 +36,26 @@ describe Bike do
       @bikes.first[:parts].should be_a(Array)
     end
     
-    it "should return parts array with only strings" do
+    it "should return at least one part" do
+      @bikes.first[:parts].should have_at_least(1).items
+    end
+    
+    it "should return parts array containing strings" do
       @bikes.first[:parts].each {|part| part.should be_a(String) }
     end
     
   end
+  
+  describe "#parts" do
+        
+    it "should raise ArgumentError if there are no expected arguments" do
+      expect { @bike.parts }.to raise_error(ArgumentError)
+    end
+    
+    it "should only expect a bike_id as an argument" do
+      @bike.parts(1).should respond_to(1)
+    end
+    
+  end
+  
 end
