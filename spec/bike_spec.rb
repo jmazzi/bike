@@ -37,6 +37,7 @@ describe Bike do
     end
     
     it "should return parts array with only strings" do
+      @bikes.first[:parts].each {|part| part.should be_a(String) }
     end
     
   end
