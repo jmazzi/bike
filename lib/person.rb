@@ -13,4 +13,8 @@ class Person
               }]
   end
   
+  def list
+    people
+  end
+  
 end

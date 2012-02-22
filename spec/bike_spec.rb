@@ -76,6 +76,9 @@ describe Bike do
       expect {@bike.owner}.to raise_error(ArgumentError)
     end
     
+    #it "should return a single hash" do
+    #  @bike.owner(1).should be_a(Hash)
+    #end
     
   end
   

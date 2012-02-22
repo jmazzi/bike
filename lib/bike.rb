@@ -26,7 +26,11 @@ class Bike
   end
   
   def owner(bike_id)
+    #person = Person.new
     
+    @bikes.each do |bike|
+      
+    end
   end
   
 end
