@@ -27,6 +27,25 @@ describe Person do
       @person.first[:name].should be_a(String)
     end
     
+  end
+  
+  describe "#show" do
+    
+    it "should raise ArgumentError if there are no arguments" do
+      expect {@person.show}.to raise_error(ArgumentError)
+    end
+    
+    it "should return a hash" do
+      @person.show(1).should be_a(Hash)
+    end
+    
+    it "should return id as a fixnum" do
+      @person.show(1)[:id].should be_a(Fixnum)
+    end
+    
+    it "should return name as a string" do
+      @person.show(1)[:name].should be_a(String)
+    end
     
   end
   

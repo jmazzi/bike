@@ -17,4 +17,10 @@ class Person
     people
   end
   
+  def show(person_id)
+    people.each do |person|
+      return person if person[:id] == person_id
+    end
+  end
+  
 end
