@@ -70,4 +70,13 @@ describe Bike do
     
   end
   
+  describe "#owner" do
+    
+    it "should raise ArgumentError if there are no arguments" do
+      expect {@bike.owner}.to raise_error(ArgumentError)
+    end
+    
+    
+  end
+  
 end
