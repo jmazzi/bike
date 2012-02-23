@@ -18,9 +18,16 @@ class Person
   end
   
   def show(person_id)
+    result = Hash.new
+    
     people.each do |person|
-      return person if person[:id] == person_id
+      if person[:id] == person_id
+        result = {:id => person[:id], :name => person[:name]}
+      end
     end
+    
+    raise "PersonNotFound" unless result.length >=1
+    result
   end
   
 end

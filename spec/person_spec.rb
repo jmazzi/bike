@@ -35,6 +35,10 @@ describe Person do
       expect {@person.show}.to raise_error(ArgumentError)
     end
     
+    it "should return PersonNotFound if the requested person id does not exist" do
+      expect {@person.show(9999)}.to raise_error(RuntimeError, "PersonNotFound")
+    end
+    
     it "should return a hash" do
       @person.show(1).should be_a(Hash)
     end

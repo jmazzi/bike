@@ -1,3 +1,5 @@
+require './lib/person.rb'
+
 class Bike
   
   attr_accessor :bikes
@@ -20,17 +22,30 @@ class Bike
   end
   
   def parts(bike_id)
-    @bikes.each do |bike|
-      return bike[:parts] if bike[:bike_id] == bike_id
+    result = Array.new
+    
+    bikes.each do |bike|
+      if bike[:bike_id] == bike_id
+        result = bike[:parts]
+      end
     end
+    
+    raise "BikeNotFound" unless result.size >=1
+    result
   end
   
   def owner(bike_id)
-    #person = Person.new
+    result = Array.new
+    person = Person.new
     
-    @bikes.each do |bike|
-      
+    bikes.each do |bike|
+      if bike[:bike_id] == bike_id
+        result = person.show(bike[:owner_id])
+      end
     end
+    
+    raise "BikeNotFound" unless result.size >=1
+    result
   end
   
 end

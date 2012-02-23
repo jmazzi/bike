@@ -52,6 +52,10 @@ describe Bike do
       expect {@bike.parts}.to raise_error(ArgumentError)
     end
     
+    it "should return BikeNotFound if the requested bike id does not exist" do
+      expect {@bike.parts(99999)}.to raise_error(RuntimeError, "BikeNotFound")
+    end
+    
     it "should only expect a singular bike_id as an argument" do
       @bike.parts(1).should_not raise_error(ArgumentError)
     end
@@ -76,9 +80,13 @@ describe Bike do
       expect {@bike.owner}.to raise_error(ArgumentError)
     end
     
-    #it "should return a single hash" do
-    #  @bike.owner(1).should be_a(Hash)
-    #end
+    it "should return BikeNotFound if the requested bike id does not exist" do
+      expect {@bike.owner(99999)}.to raise_error(RuntimeError, "BikeNotFound")
+    end
+    
+    it "should return a single hash" do
+      @bike.owner(1).should be_a(Hash)
+    end
     
   end
   
